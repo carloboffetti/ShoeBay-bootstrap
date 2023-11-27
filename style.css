@@ -1,0 +1,172 @@
+/* MY FONT */
+@font-face {
+    font-family: Freshman;
+    src: url(./media/Freshman.ttf);
+  }
+
+
+  /* Variabili */
+:root{
+    --bg-color: #0a100d;
+    --red: #6f1110;
+    --grey:rgb(86,84,90);
+    --lightGrey: #e9ecef; /* Stesso colore dell'immagine della scarpa, preso con color picker */
+}
+.fc-red{
+    color: var(--red);
+}
+.fc-white{
+    color: var(--lightGrey);
+}
+.f-p{
+    font-family: Freshman;
+}
+.f-s{
+    font-family: 'Kanit', sans-serif;
+}
+.bg-grey{
+    background-color: var(--grey);
+}
+.bg-lightGrey{
+   background-color: #e9ecef; 
+}
+.bg-red{
+    background-color: var(--red);
+}
+
+body{
+    margin: 0;
+    background-color: var(--bg-color);
+
+}
+/* Navbar */
+.navbar{
+    background-color: var(--red);
+}
+.navbar-logo{
+    width: 60px;
+    height: 60px;
+}
+.custom-title{
+    font-family: 'Freshman';
+    font-size: large;
+}
+.divLogo{
+    min-width: 20%;
+
+}
+.rightDiv{
+    width: 20%;
+    display: flex;
+    justify-content: end;
+
+}
+/* HEADER */
+.headerCustom{
+    margin-top: 76px;
+    position: relative;
+    overflow-x: hidden;
+    height: calc(100vh - 76px);
+}
+.headerLeft{
+    background: radial-gradient(circle, rgba(255,255,255,0) 50%, rgba(10,16,13,1) 75%),url(./media/oguzhan-turan-jordans-render-1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+   
+}
+.containerHeader{
+    overflow: hidden;
+}
+.prova{
+    border-right: 3px solid red;
+}
+.slideToLeft{
+    animation: slideToLeft 1.5s ease forwards;
+    transform: translateX(300px); /* Lo stato originale */
+    opacity: 0;
+}
+.arrowCustom{
+    
+    width: fit-content;
+    position: absolute;
+    bottom: 50px;
+    right: 100px;
+    
+}
+.target{
+    height: 50px;
+}
+.mainCustom{
+    background-color: #23222273;
+}
+.circleArrow{
+    height: 30px;
+    width: 30px;
+
+}
+.containerCards{
+    height: 115px;
+}
+.cardCol{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 20px 27px -5px, rgba(0, 0, 0, 0.3) 0px 13px 16px -8px;
+}
+.rowContainer{
+    background: linear-gradient(138deg, rgba(111,17,16,1) 0%, rgba(10,16,13,1) 30%);
+
+}
+/* TIMELINE */
+.timeline{
+    border-left: 3px solid var(--red);
+    position: relative;
+    
+}
+
+.pallino::before{
+    content: '';
+    width: 15px;
+    height: 15px;
+    border: 1px solid white;
+    background-color: var(--red);
+    border-radius: 50%;
+    position: absolute;
+    left: -9px;
+
+}
+.footerCustom{
+    background-color: var(--lightGrey);
+}
+
+/* Animazione Header */
+@keyframes slideToLeft{
+    from{
+        opacity: 0;
+        transform: translateX(300px);
+    } to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+/* Media query RESPONSIVE */
+@media screen and (max-width: 600px){
+    /* navbar */
+    .rightDiv{
+        display: none;
+    }
+    /* HEADER */
+    .containerHeader{
+        background: radial-gradient(circle, rgba(255,255,255,0) 50%, rgba(10,16,13,1) 75%),url(./media/oguzhan-turan-jordans-render-1.jpg);
+        background-size: cover;
+        background-position: top -60px left 43% ;
+        background-repeat: no-repeat;
+        height: 100%;
+    }
+    .headerRight{
+        padding-bottom: 30px;
+    }
+    .headerLeft{
+        background: none;
+    }
+    
+}
